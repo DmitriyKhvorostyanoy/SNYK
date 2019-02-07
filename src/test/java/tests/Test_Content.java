@@ -24,7 +24,7 @@ public class Test_Content {
     Properties prop = new Properties();
     @Before
     public void precondition() throws InterruptedException, IOException {
-        FileInputStream fis = new FileInputStream("C:\\Auto_Tests_Projects\\Snyk\\src\\main\\resources\\data.properties");
+        FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"/data.properties");
         prop.load(fis);
         setUP();
         login();
@@ -108,8 +108,8 @@ public class Test_Content {
     private void login() throws InterruptedException {
         SelenideElement login=$("#wp-submit");
         Thread.sleep(1500);
-        $("#user_login").setValue("admin");
-        $("#user_pass").sendKeys("5500");
+        $("#user_login").setValue("*****");
+        $("#user_pass").sendKeys("*****");
         Thread.sleep(1500);
         login.click();
     }
@@ -119,6 +119,6 @@ public class Test_Content {
 
         clearBrowserCache();
         Configuration.timeout = 15000;
-        open("http://snyk:Cfqn_Snyk@snyk.jaguar-team.com/admin");
+        open("http://*******.jaguar-team.com/admin");
     }
 }

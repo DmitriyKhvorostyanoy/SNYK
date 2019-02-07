@@ -30,7 +30,7 @@ public class TestSnyk {
 
         clearBrowserCache();
         Configuration.timeout = 15000;
-        open("http://snyk:Cfqn_Snyk@snyk.jaguar-team.com/");
+        open("http://*******.jaguar-team.com/");
     }
     @Test
         public void GitLink() {
